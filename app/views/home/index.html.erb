@@ -1,7 +1,7 @@
 <h1> Add buttons to download csv file, pdf file </h1>
 <button>
-    <%= link_to 'Download PDF', home_download_pdf_path %>
+    <%= link_to 'Download PDF', home_download_pdf_path(format: :pdf) %>
 </button>
 <button>
-    <%= link_to 'Download CSV', home_download_csv_path %> 
+    <%= link_to 'Download CSV', home_download_csv_path(format: :csv) %> 
 </button>
