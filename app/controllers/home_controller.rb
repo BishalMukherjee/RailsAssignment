@@ -25,4 +25,10 @@ class HomeController < ApplicationController
         end
     end
 
+    def send_email
+        @students = Student.all
+        MyMailer.test_mail.deliver_now
+        render 'index'
+    end
+
 end

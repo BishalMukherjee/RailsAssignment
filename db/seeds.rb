@@ -20,3 +20,10 @@ end
         email: Faker::Internet.email,
         phone_number: Faker::PhoneNumber.phone_number}])
 end
+
+50.times do
+    Student.create([
+        {name: Faker::Name.name,
+        email: Faker::Internet.email,
+        phone_number: Faker::PhoneNumber.phone_number}])
+end
