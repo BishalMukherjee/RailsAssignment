@@ -1,0 +1,7 @@
+<%= form_for @person do |f|%>
+  <%= f.label :name%><br>
+  <%= f.text_field :name, required: true %><br>
+  <%= f.label :email%><br>
+  <%= f.email_field :email, required: true%><br>
+  <%= f.submit "Add Person"%>
+<%end%>

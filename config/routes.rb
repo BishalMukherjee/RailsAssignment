@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'home/send/email', to: 'home#send_email'
 
   resources :images
+  resources :people
 end
