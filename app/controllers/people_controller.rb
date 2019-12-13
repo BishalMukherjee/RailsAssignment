@@ -1,7 +1,11 @@
 class PeopleController < ApplicationController
 
   def index
-    @people = Person.all
+    if params[:search].blank?
+      @people = Person.all  
+    else 
+      @people = Person.all.where("name LIKE :search OR email LIKE :search", search: "%#{params[:search]}%")  
+    end  
   end
 
   def new
@@ -38,7 +42,7 @@ class PeopleController < ApplicationController
 
   private
   def person_params
-    params.require(:person).permit(:name, :email)
+    params.require(:person).permit(:name, :email, :search)
   end
 
 end
