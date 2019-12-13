@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get 'home/download/pdf', to: 'home#download_pdf'
   get 'home/download/csv', to: 'home#download_csv'
   get 'home/send/email', to: 'home#send_email'
+
+  resources :images
 end

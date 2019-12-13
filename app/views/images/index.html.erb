@@ -1,0 +1,12 @@
+<h1>Image Gallery</h1>
+
+<% @images.each do |im| %>
+  <%= image_tag im.picture.url( :thumb)%>
+  <%= im.picture_file_name %>
+  <%= link_to "Show",  image_path(im)%>
+  <br>
+<% end %>
+<br/>
+
+<%= link_to "Upload Image", new_image_path %>
+

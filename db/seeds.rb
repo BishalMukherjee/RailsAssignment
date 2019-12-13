@@ -7,23 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 50.times do
-    User.create([
-        {user_name: Faker::Name.name,
-        user_email: Faker::Internet.email,
-        phone_number: Faker::PhoneNumber.phone_number}])
+  User.create([
+    {user_name: Faker::Name.name,
+    user_email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number}])
 end
 
 
 50.times do
-    Employee.create([
-        {name: Faker::Name.name,
-        email: Faker::Internet.email,
-        phone_number: Faker::PhoneNumber.phone_number}])
+  Employee.create([
+    {name: Faker::Name.name,
+    email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number}])
 end
 
 50.times do
-    Student.create([
-        {name: Faker::Name.name,
-        email: Faker::Internet.email,
-        phone_number: Faker::PhoneNumber.phone_number}])
+  Student.create([
+    {name: Faker::Name.name,
+    email: Faker::Internet.email,
+    phone_number: Faker::PhoneNumber.phone_number}])
 end
