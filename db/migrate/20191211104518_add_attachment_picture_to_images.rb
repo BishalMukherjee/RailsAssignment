@@ -1,7 +1,7 @@
 class AddAttachmentPictureToImages < ActiveRecord::Migration[5.2]
   def self.up
     change_table :images do |t|
-      t.attachment :picture
+      t.attachment :picture, null: false
     end
   end
 

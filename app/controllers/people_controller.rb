@@ -4,7 +4,7 @@ class PeopleController < ApplicationController
     if params[:search].blank?
       @people = Person.all  
     else 
-      @people = Person.all.where("name LIKE :search OR email LIKE :search", search: "%#{params[:search]}%")  
+      @people = Person.search_result(params[:search])  
     end  
   end
 
@@ -14,7 +14,7 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.create(person_params)
-
+    
     redirect_to people_path
   end
 

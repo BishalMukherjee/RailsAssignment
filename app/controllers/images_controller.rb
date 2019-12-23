@@ -9,11 +9,8 @@ class ImagesController < ApplicationController
 
 	def create
     @image = Image.new(image_params)
-		if @image.save
-			flash[:notice] = "Successfully uploaded"
-		else
-			flash[:notice] = "Please upload a properly"
-			render 'create'
+		unless @image.save
+			render "create"
 		end
 	end
 

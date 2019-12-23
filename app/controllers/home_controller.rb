@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       format.html
       format.pdf do
         pdf = ExportPdf.new(@employees)
-        send_data pdf.render, filename: 'report.pdf', type: 'application/pdf'
+        send_data pdf.render, filename: "report.pdf", type: "application/pdf"
       end
     end
   end
@@ -25,7 +25,7 @@ class HomeController < ApplicationController
   def send_email
     @students = Student.all
     MyMailer.test_mail.deliver_now
-    render 'index'
+    render "index"
   end
 
 end

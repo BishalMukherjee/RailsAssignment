@@ -13,39 +13,39 @@
 ActiveRecord::Schema.define(version: 2019_12_13_074545) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "picture_file_name"
-    t.string "picture_content_type"
-    t.bigint "picture_file_size"
-    t.datetime "picture_updated_at"
+    t.string "picture_file_name", null: false
+    t.string "picture_content_type", null: false
+    t.bigint "picture_file_size", null: false
+    t.datetime "picture_updated_at", null: false
   end
 
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "name"
-    t.string "email"
+    t.text "name", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "students", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.string "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_name"
-    t.string "user_email"
-    t.string "phone_number"
+    t.string "user_name", null: false
+    t.string "user_email", null: false
+    t.string "phone_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

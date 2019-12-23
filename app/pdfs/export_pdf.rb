@@ -2,8 +2,8 @@ class ExportPdf
   include Prawn::View
 
   def initialize(employee)
-      @employee = employee
-      line_items
+    @employee = employee
+    line_items
   end
 
   def line_items
